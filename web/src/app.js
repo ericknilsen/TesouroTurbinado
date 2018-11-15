@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import EmpregadoApp from './components/EmpregadoApp';
+import TesouroTurbinado from './TesouroTurbinado';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 
-ReactDOM.render(<EmpregadoApp />, document.getElementById('app'));
+ReactDOM.render(<TesouroTurbinado />, document.getElementById('app'));
