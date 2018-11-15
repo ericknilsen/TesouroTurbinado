@@ -1,0 +1,24 @@
+{
+  "name": "empregado-api",
+  "version": "1.0.0",
+  "description": "API de Restaurantes",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "concurrently --kill-others \"tsc -w\" \"nodemon dist/main.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "4.13.9",
+    "restify": "^7.2.1",
+    "restify-cors-middleware": "1.1.0"
+  },
+  "devDependencies": {
+    "concurrently": "^2.2.0",
+    "@types/mongoose": "4.7.32",
+    "@types/node": "^10.12.7"
+  }
+}

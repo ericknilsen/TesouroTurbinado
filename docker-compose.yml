@@ -1,0 +1,42 @@
+
+version: '3'
+networks:
+  banco:
+  web:   
+services:
+  db:
+    image: mongo
+    restart: always
+    networks:
+      - banco  
+  app:
+    image: node:10
+    user: "root"
+    working_dir: /home/node/app
+    volumes:
+      - ./app:/home/node/app
+    expose:
+      - "3000"
+    ports:
+      - 3000:3000  
+    command: bash -c "npm i && npm install -g typescript && npm install -g nodemon && npm start"
+    networks:
+      - banco
+      - web
+    depends_on:
+      - db    
+  frontend:
+    image: node:10
+    user: "root"
+    working_dir: /home/node/app     
+    volumes:
+      - ./web:/home/node/app
+    expose:
+      - "8080"
+    ports:
+      - 8080:8080          
+    command: bash -c "npm i && yarn run dev-server"
+    networks:
+      - web
+    depends_on:
+      - app    
