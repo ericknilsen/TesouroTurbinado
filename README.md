@@ -1,4 +1,4 @@
-## Aplicação SPA com Docker
+## TesouroTurbinado
 
 A aplicação foi construída conforme arquitetura da figura abaixo:
 
@@ -8,17 +8,21 @@ A aplicação foi construída conforme arquitetura da figura abaixo:
 
 1) Instale o [Docker](https://docs.docker.com/install)
 
-2) [Baixe o repositório](https://github.com/ericknilsen/HandsOn/tree/master/docker/ambiente_v3) com os arquivos de configuração do Docker
+2) Baixe o repositório:
+
+```
+$ git clone https://github.com/ericknilsen/TesouroTurbinado
+```
 
 3) Configure os containers
 
-- Navegue para dentro do diretório _ambiente_v3_
+- Navegue para dentro do diretório _TesouroTurbinado_
 - Inicialize os containers:
 ```shell
 $ sudo docker-compose up
 ```
 
-4) Acesse o endereço [http://localhost/empregado.html](http://localhost/empregado.html)
+4) Acesse o endereço [http://localhost:8080](http://localhost:8080)
 
 
 **Opcional**
